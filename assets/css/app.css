@@ -475,7 +475,7 @@ template {
         max-width: calc(100% - 8rem); } }
     @media screen and (min-width: 90.1em) {
       .section .container {
-        max-width: 144rem; } }
+        max-width: 147rem; } }
     .section .container .layout {
       width: 100%; }
 
@@ -650,3 +650,5 @@ template {
 
 /* Main Configuration Don't Touch
 	 ========================================================================== */
+.relevant-range-section {
+  background-color: gray; }

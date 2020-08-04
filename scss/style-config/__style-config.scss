@@ -7,18 +7,12 @@ $medium: "dinmedium", sans-serif;
 $bold: "DINPro-Bold", sans-serif;
 $script: "beautiful_every_timeregular", sans-serif;
 
-// GEMVARA theme color
+// Assignment Theme Color
 $primary-color: #cc0000;
-$secondary-color: green;
-$link-color: #8dcae8;
 
 // WebColors
-$white: #f4f7f6;
-$black: #2c2c31;
-$z-black: #000000;
-$gray: #36343e;
-$light-gray: #5d5a67;
-$red: #f93958;
+$white: #ffffff;
+$black: #000000;
 
 // Media Query Screen Size's
 $medium: 50em; //800px
@@ -36,16 +30,7 @@ $container-gutter-space-small: 3rem;
 $border-radius: 0;
 
 // Container Width
-$container-max-width: 144rem;
-
-// Mobile Menu
-$height-icon: 1.8rem;
-$width-line: 3.2rem;
-$height-line: 0.4rem;
-$transition-time: 0.3s;
-$rotation: 45deg;
-$translateY: ($height-icon / 2);
-$translateX: 0;
+$container-max-width: 147rem;
 
 @import "media-query", "typography", "helpers", "normalize", "buttons", "container", "flex", "spacing";
 
