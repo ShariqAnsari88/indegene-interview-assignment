@@ -14,7 +14,6 @@
     <span class="top-red-border"></span>
     <div class="container">
       <div class="layout">
-
         <!-- Header section with main title -->
         <header class="header-title">
           <h1>Result of the test</h1>
@@ -22,29 +21,29 @@
         <!-- Header section with main title -->
 
         <!-- Time icons section -->
-        <section class="time-icons-section">
-          <div class="time-icon">
-            <i class="icon"></i>
+        <section class="time-icons-section flex justify-content-center align-items-center">
+          <div class="time-icon flex justify-content-center align-items-center flex-flow-column">
+            <i class="icon"><img src="assets/img/icons/never.png" alt="Never" /></i>
             <p>Never</p>
           </div>
 
-          <div class="time-icon">
-            <i class="icon"></i>
+          <div class="time-icon flex justify-content-center align-items-center flex-flow-column">
+            <i class="icon"><img src="assets/img/icons/occasionally.png" alt="Never" /></i>
             <p>Occasionally</p>
           </div>
 
-          <div class="time-icon">
-            <i class="icon"></i>
+          <div class="time-icon flex justify-content-center align-items-center flex-flow-column">
+            <i class="icon"><img src="assets/img/icons/4-hours.png" alt="Never" /></i>
             <p>4 hours</p>
           </div>
 
-          <div class="time-icon">
-            <i class="icon"></i>
+          <div class="time-icon flex justify-content-center align-items-center flex-flow-column">
+            <i class="icon"><img src="assets/img/icons/yearly.png" alt="Never" /></i>
             <p>Yearly</p>
           </div>
 
-          <div class="time-icon">
-            <i class="icon"></i>
+          <div class="time-icon flex justify-content-center align-items-center flex-flow-column">
+            <i class="icon"><img src="assets/img/icons/never.png" alt="Never" /></i>
             <p>Never</p>
           </div>
         </section>
@@ -52,16 +51,32 @@
 
         <!-- Relevant range slider section -->
         <section class="relevant-range-section">
-          <input type="range" min="1" max="3" step="1" value="1">
+          <div class="relevant-range-bar-outer flex align-items-center">
+            <div class="relevant-range-bar flex">
+              <input type="range" min="1" max="3" step="1" value="1" />
+              <div class="range-triggers flex">
+                <div class="trigger-left"></div>
+                <div class="trigger-right"></div>
+              </div>
+              <div class="range-level one">
+                <span>Less relevant</span>
+              </div>
+              <div class="range-level two">
+                <span>Relevant</span>
+              </div>
+              <div class="range-level three">
+                <span>Very relevant</span>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- Relevant range slider section -->
 
         <!-- Footer section with try again CTA -->
-        <footer>
-          <a href="#">Try again</a>
+        <footer class="flex justify-content-center">
+          <a href="#" class="reset button flex justify-content-center align-items-center">Try again</a>
         </footer>
         <!-- Footer section with try again CTA -->
-
       </div>
     </div>
   </section>

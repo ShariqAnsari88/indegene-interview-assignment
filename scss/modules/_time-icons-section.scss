@@ -1,0 +1,77 @@
+$circle-hw: 20rem;
+$md-circle-hw: 15rem;
+$icon-hw: 6rem;
+$md-icon-hw: 4.5rem;
+
+.time-icons-section {
+  width: 100%;
+  margin-top: 15vh;
+
+  .time-icon {
+    flex-basis: $circle-hw;
+    height: $circle-hw;
+    background-color: $white;
+    border-radius: $circle-hw/2;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    @include transition(0.5s);
+    transform: translateY(0);
+
+    @include media($medium) {
+      margin: 0 1rem;
+      flex-basis: $md-circle-hw;
+      height: $md-circle-hw;
+    }
+    @include media($xxlarge) {
+      margin: 0 1.5rem;
+      flex-basis: $circle-hw;
+      height: $circle-hw;
+    }
+
+    .icon {
+      width: $icon-hw;
+      height: $icon-hw;
+      @include media($medium) {
+        width: $md-icon-hw;
+        height: $md-icon-hw;
+      }
+      @include media($xxlarge) {
+        width: $icon-hw;
+        height: $icon-hw;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      display: block;
+      padding-top: 1rem;
+      color: $primary-color;
+      font-weight: bold;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      transform: translateY(1rem);
+    }
+    &.active {
+      box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+    }
+    &:hover {
+      box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.has-active {
+    .time-icon {
+      opacity: 0.5;
+      transform: translateY(1rem);
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

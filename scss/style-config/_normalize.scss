@@ -25,6 +25,8 @@ html {
 
 body {
   margin: 0;
+  background: url("../img/background-img.jpg") no-repeat;
+  background-size: cover;
   @include base-font-style;
 }
 

@@ -7,42 +7,41 @@ $button-side-spacing: 1rem;
 .button {
   width: 100%;
   display: inline-block;
-  padding: 1.5rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   margin: 0.5rem 0;
   appearance: none;
   color: white;
-  background-color: black;
-  font-family: $regular;
-  font-size: 1.4rem;
-  font-weight: normal;
-  line-height: 1;
+  background-color: rgba(255, 255, 255, 0.35);
+  font-family: $medium;
+  font-size: 2.2rem;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  vertical-align: middle;
-  border: 0;
+  border-radius: 5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   user-select: none;
-  transition: all 0.2s ease;
-  max-width: fit-content;
+  max-width: 22rem;
+  @include transition;
 
-  @include media($medium) {
-    padding: 1rem 1.5rem;
-    margin: 1rem 0;
-    font-size: 1.1rem;
-  }
-  @include media($xxlarge) {
-    padding: 1rem 1.5rem;
-    margin: 1rem 0;
-    font-size: 1.4rem;
+  &:after {
+    content: "";
+    margin-left: 2rem;
+    width: 1rem;
+    height: 1.6rem;
+    background: url("../img/chev.png") no-repeat;
+    background-size: contain;
+    transform: translateX(0);
+    @include transition;
   }
 
-  &:hover:not(.disabled),
-  &:focus:not(.disabled),
-  &:active:not(.disabled) {
-    color: white;
-    background-color: lighten(black, 10);
-    opacity: 1;
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+
+    &:after {
+      transform: translateX(1rem);
+    }
   }
 }

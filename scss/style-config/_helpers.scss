@@ -2,3 +2,6 @@
   padding-left: $gutter-space;
   padding-right: $gutter-space;
 }
+@mixin transition($time: 0.2s) {
+  transition: all #{$time} ease;
+}
