@@ -31,7 +31,7 @@ $border-radius: 0;
 
 // Container Width
 $container-max-width: 120rem;
-$md-container-max-width: 100rem;
+$md-container-max-width: 80rem;
 
 @import "media-query", "typography", "helpers", "normalize", "buttons", "container", "flex", "spacing";
 

@@ -9,6 +9,9 @@
   font-size: 1.3rem;
   line-height: 1.5;
   @include media($medium) {
+    font-size: 1.4rem;
+  }
+  @include media($xxlarge) {
     font-size: 1.8rem;
   }
 }
@@ -27,6 +30,9 @@
   font-size: 1.6rem;
   line-height: 1.5;
   @include media($medium) {
+    font-size: 1.5rem;
+  }
+  @include media($xxlarge) {
     font-size: 2rem;
   }
 }
@@ -42,10 +48,10 @@
 
 @mixin h1-font-style {
   @include headings-font-style;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   line-height: 1;
   @include media($medium) {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   @include media($xxlarge) {
     font-size: 8rem;

@@ -1,3 +1,9 @@
 footer {
-  margin-top: 16vh;
+  margin-top: 10vh;
+  margin-bottom: 2rem;
+
+  @include media($medium) {
+    margin-top: 16vh;
+  }
 }
+ 

@@ -1,22 +1,46 @@
 $range-bar-h: 2rem;
+$md-range-bar-h: 1.5rem;
 $range-bar-outer-h: 4rem;
+$md-range-bar-outer-h: 3rem;
 $range-thumb-w: 2.2rem;
+$md-range-thumb-w: 1.6rem;
 
 .relevant-range-section {
   padding: 0 8rem;
   margin-top: 8vh;
+  @include media($medium) {
+    padding: 0 4rem;
+  }
+  @include media($xxlarge) {
+    padding: 0 8rem;
+  }
   .relevant-range-bar-outer {
     width: 100%;
     padding: 0 1rem;
     height: $range-bar-outer-h;
     border-radius: $range-bar-outer-h/2;
     background: rgba(255, 255, 255, 0.2);
+    @include media($medium) {
+      padding: 0 .75rem;
+      height: $md-range-bar-outer-h;
+    }
+    @include media($xxlarge) {
+      padding: 0 1rem;
+      height: $range-bar-outer-h;
+    }
   }
   .relevant-range-bar {
     width: 100%;
     height: $range-bar-h;
     border-radius: $range-bar-h/2;
     position: relative;
+
+    @include media($medium) {
+      height: $md-range-bar-h;
+    }
+    @include media($xxlarge) {
+      height: $range-bar-h;
+    }
 
     .range-level {
       flex-grow: 1;
@@ -37,12 +61,14 @@ $range-thumb-w: 2.2rem;
       }
 
       span {
+        width: 100%;
         position: absolute;
         top: 4rem;
         left: 50%;
         transform: translateX(-50%);
         @include large-font-style;
         color: $white;
+        text-align: center;
         text-transform: uppercase;
       }
     }
@@ -70,6 +96,14 @@ $range-thumb-w: 2.2rem;
     top: -1.8rem;
     transform: translateX(-50%);
     z-index: 9;
+    @include media($medium){
+      top: -1.4rem;
+      width: calc(70% - #{$md-range-thumb-w});
+    }
+    @include media($xlarge){
+      top: -1.8rem;
+      width: calc(70% - #{$range-thumb-w});
+    }
   }
 
   input[type="range"]::-webkit-slider-thumb {
@@ -79,6 +113,14 @@ $range-thumb-w: 2.2rem;
     background: url("../img/range-thumb.png") no-repeat;
     background-size: contain;
     cursor: pointer;
+    @include media($medium){
+      height: 3.5rem;
+      width: $md-range-thumb-w;
+    }
+    @include media($xxlarge){
+      height: 4rem;
+      width: $range-thumb-w;
+    }
   }
 
   input[type="range"]:focus {

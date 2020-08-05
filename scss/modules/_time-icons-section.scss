@@ -1,24 +1,28 @@
 $circle-hw: 20rem;
-$md-circle-hw: 15rem;
+$md-circle-hw: 14rem;
 $icon-hw: 6rem;
-$md-icon-hw: 4.5rem;
+$md-icon-hw: 4rem;
 
 .time-icons-section {
-  width: 100%;
-  margin-top: 15vh;
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-top: 3vh;
+  @include media($medium) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15vh;
+  }
 
   .time-icon {
-    flex-basis: $circle-hw;
-    height: $circle-hw;
-    background-color: $white;
-    border-radius: $circle-hw/2;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     cursor: pointer;
     user-select: none;
     @include transition(0.5s);
     transform: translateY(0);
-
     @include media($medium) {
+      background-color: $white;
+      border-radius: $circle-hw/2;
+      flex-basis: $circle-hw;
       margin: 0 1rem;
       flex-basis: $md-circle-hw;
       height: $md-circle-hw;
@@ -27,6 +31,13 @@ $md-icon-hw: 4.5rem;
       margin: 0 1.5rem;
       flex-basis: $circle-hw;
       height: $circle-hw;
+    }
+
+    .mb {
+      width: $circle-hw;
+      height: $circle-hw;
+      background-color: $white;
+      border-radius: $circle-hw/2;
     }
 
     .icon {
@@ -52,25 +63,35 @@ $md-icon-hw: 4.5rem;
     }
 
     &.disabled {
-      opacity: 0.5;
-      transform: translateY(1rem);
+      @include media($medium) {
+        opacity: 0.5;
+        transform: translateY(1rem);
+      }
     }
     &.active {
-      box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+      @include media($medium) {
+        box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+      }
     }
     &:hover {
-      box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+      @include media($medium) {
+        box-shadow: 0px 0px 38px 1px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
   &.has-active {
     .time-icon {
-      opacity: 0.5;
-      transform: translateY(1rem);
+      @include media($medium) {
+        opacity: 0.5;
+        transform: translateY(1rem);
+      }
 
       &.active {
-        opacity: 1;
-        transform: translateY(0);
+        @include media($medium) {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }

@@ -5,7 +5,8 @@
     margin: 0 auto;
     max-width: calc(100% - #{$container-gutter-space-small});
     @include media($medium) {
-      max-width: calc(100% - #{$container-gutter-space});
+      // max-width: calc(100% - #{$container-gutter-space});
+      max-width: $md-container-max-width;
     }
     @include media($large) {
       max-width: $md-container-max-width;

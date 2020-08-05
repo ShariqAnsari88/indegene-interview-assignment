@@ -25,6 +25,16 @@ $button-side-spacing: 1rem;
   max-width: 22rem;
   @include transition;
 
+  @include media($medium) {
+    font-size: 1.8rem;
+    max-width: 18rem;
+  }
+  @include media($xxlarge) {
+    font-size: 2.2rem;
+    padding: 1.5rem 1.5rem;
+    max-width: 22rem;
+  }
+
   &:after {
     content: "";
     margin-left: 2rem;
@@ -34,6 +44,14 @@ $button-side-spacing: 1rem;
     background-size: contain;
     transform: translateX(0);
     @include transition;
+    @include media($medium) {
+      height: 1.2rem;
+      margin-left: 1rem;
+    }
+    @include media($xxlarge) {
+      height: 1.6rem;
+      margin-left: 2rem;
+    }
   }
 
   &:hover,
