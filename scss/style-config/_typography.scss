@@ -27,7 +27,7 @@
 @mixin large-font-style {
   margin: 0;
   font-family: $bold;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   @include media($medium) {
     font-size: 1.5rem;

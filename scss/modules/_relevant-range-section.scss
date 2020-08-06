@@ -6,7 +6,7 @@ $range-thumb-w: 2.2rem;
 $md-range-thumb-w: 1.6rem;
 
 .relevant-range-section {
-  padding: 0 8rem;
+  padding: 0;
   margin-top: 8vh;
   @include media($medium) {
     padding: 0 4rem;
@@ -21,7 +21,7 @@ $md-range-thumb-w: 1.6rem;
     border-radius: $range-bar-outer-h/2;
     background: rgba(255, 255, 255, 0.2);
     @include media($medium) {
-      padding: 0 .75rem;
+      padding: 0 0.75rem;
       height: $md-range-bar-outer-h;
     }
     @include media($xxlarge) {
@@ -89,18 +89,18 @@ $md-range-thumb-w: 1.6rem;
 
   input[type="range"] {
     -webkit-appearance: none;
-    width: calc(70% - #{$range-thumb-w});
+    width: calc(75% - 1.1rem);
     background: transparent;
     position: absolute;
     left: 50%;
     top: -1.8rem;
     transform: translateX(-50%);
     z-index: 9;
-    @include media($medium){
+    @include media($medium) {
       top: -1.4rem;
       width: calc(70% - #{$md-range-thumb-w});
     }
-    @include media($xlarge){
+    @include media($xlarge) {
       top: -1.8rem;
       width: calc(70% - #{$range-thumb-w});
     }
@@ -113,11 +113,11 @@ $md-range-thumb-w: 1.6rem;
     background: url("../img/range-thumb.png") no-repeat;
     background-size: contain;
     cursor: pointer;
-    @include media($medium){
+    @include media($medium) {
       height: 3.5rem;
       width: $md-range-thumb-w;
     }
-    @include media($xxlarge){
+    @include media($xxlarge) {
       height: 4rem;
       width: $range-thumb-w;
     }
